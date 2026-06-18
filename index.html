@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruth Caceres - CV Ciberseguridad</title>
 
-    <!-- Estilos (CSS) - Aquí se define cómo se ve la página -->
     <style>
-        /* --- RESET Y ESTILOS GENERALES --- */
         * {
             margin: 0;
             padding: 0;
@@ -28,33 +26,30 @@
             background: #fff;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            overflow: hidden; /* Para que las esquinas del contenedor sean redondeadas */
+            overflow: hidden;
         }
 
-        /* --- ENCABEZADO (HEADER) --- */
         header {
-            background: #0a2f44; /* Azul marino, da sensación de confianza */
+            background: #0a2f44;
             color: #fff;
             padding: 40px 20px;
             display: flex;
-            flex-wrap: wrap; /* Para que sea responsivo */
+            flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-            gap: 30px; /* Espacio entre la foto y el texto */
+            gap: 30px;
             text-align: center;
         }
 
-        /* Ajustes para la foto (si pones una) */
         .profile-img img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             border: 5px solid #fff;
-            object-fit: cover; /* Para que la imagen no se deforme */
-            background-color: #ddd; /* Fondo por si no hay foto */
+            object-fit: cover;
+            background-color: #ddd;
         }
-        
-        /* Si no tienes foto, este div se oculta o se ve como un círculo vacío */
+
         .profile-img {
             flex-shrink: 0;
         }
@@ -70,12 +65,10 @@
             font-weight: 300;
         }
 
-        /* --- CONTENIDO PRINCIPAL --- */
         .main-content {
             padding: 40px;
         }
 
-        /* Estilo para todas las secciones */
         section {
             margin-bottom: 40px;
             border-bottom: 1px solid #eee;
@@ -95,12 +88,10 @@
             padding-left: 10px;
         }
 
-        /* --- SOBRE MÍ --- */
         .about-text {
             font-size: 1.1rem;
         }
 
-        /* --- EDUCACIÓN --- */
         .edu-item {
             margin-bottom: 10px;
         }
@@ -112,7 +103,6 @@
             color: #555;
         }
 
-        /* --- HABILIDADES --- */
         .skills-grid {
             display: flex;
             flex-wrap: wrap;
@@ -128,7 +118,6 @@
             border: 1px solid #cbd8e3;
         }
 
-        /* --- IDIOMAS --- */
         .lang-item {
             margin-bottom: 5px;
         }
@@ -140,7 +129,6 @@
             font-style: italic;
         }
 
-        /* --- PROYECTOS --- */
         .project-item {
             background: #f9fafb;
             padding: 15px;
@@ -168,11 +156,10 @@
             color: #1a2f44;
         }
 
-        /* --- CONTACTO --- */
         .contact-info {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 15px;
             align-items: center;
         }
         .contact-info a {
@@ -183,13 +170,15 @@
             padding: 8px 15px;
             border-radius: 5px;
             transition: background 0.3s, color 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
         }
         .contact-info a:hover {
             background: #0a2f44;
             color: #fff;
         }
 
-        /* --- PIE DE PÁGINA --- */
         footer {
             text-align: center;
             padding: 20px;
@@ -198,7 +187,6 @@
             font-size: 0.9rem;
         }
 
-        /* --- RESPONSIVE (Para que se vea bien en celulares) --- */
         @media (max-width: 600px) {
             header {
                 flex-direction: column;
@@ -210,6 +198,13 @@
             .main-content {
                 padding: 20px;
             }
+            .contact-info {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .contact-info a {
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -217,16 +212,9 @@
 
     <div class="container">
 
-        <!-- ====== ENCABEZADO ====== -->
         <header>
-            <!-- Foto: Si no tienes, puedes eliminar este div o dejar solo el círculo -->
             <div class="profile-img">
                 <img src="ruth.jpg" alt="Foto de Ruth Caceres">
-                <!--
-                    IMPORTANTE: Para que funcione, necesitas una imagen llamada "ruth.jpg"
-                    en la misma carpeta que este archivo. Puedes usar una foto tuya o
-                    un avatar. Si no tienes, borra o comenta esta línea.
-                -->
             </div>
             <div class="header-text">
                 <h1>Ruth Nayle Caceres Yareta</h1>
@@ -234,10 +222,8 @@
             </div>
         </header>
 
-        <!-- ====== CONTENIDO ====== -->
         <div class="main-content">
 
-            <!-- SECCIÓN: SOBRE MÍ -->
             <section id="about">
                 <h2>Sobre Mí</h2>
                 <div class="about-text">
@@ -250,36 +236,32 @@
                 </div>
             </section>
 
-            <!-- SECCIÓN: EDUCACIÓN -->
             <section id="education">
                 <h2>Educación</h2>
                 <div class="edu-item">
-                    <div class="institution">[Nombre de tu Universidad]</div>
-                    <div class="details">Carrera: [Nombre de tu Carrera, ej: Ingeniería en Ciberseguridad]</div>
+                    <div class="institution">SENATI</div>
+                    <div class="details">Carrera: Ingeniería en Ciberseguridad</div>
                     <div class="details">Semestre: Cuarto Semestre (Cursando)</div>
                 </div>
-                <!-- Puedes agregar más items si estudiaste antes -->
                 <div class="edu-item">
                     <div class="institution">Cursos Complementarios</div>
-                    <div class="details">[Ej: Introducción a la Ciberseguridad - Cisco Networking Academy]</div>
+                    <div class="details">Introducción a la Ciberseguridad - Cisco Networking Academy</div>
                 </div>
             </section>
 
-            <!-- SECCIÓN: HABILIDADES TÉCNICAS -->
             <section id="skills">
                 <h2>Habilidades Técnicas</h2>
                 <ul class="skills-grid">
                     <li>Linux / Ubuntu (Básico)</li>
                     <li>Redes y Protocolos (TCP/IP, DNS)</li>
                     <li>Análisis de Vulnerabilidades (Teórico)</li>
-                    <li>Wireshark (Básico)</li>
                     <li>Python (Aprendiendo)</li>
-                    <li>Virtualización (VMware/VirtualBox)</li>
+                    <li>Html, Javascripts</li>
+                    <li>Virtualización (VirtualBox)</li>
                     <li>Ofimática (Word, Excel, PowerPoint)</li>
                 </ul>
             </section>
 
-            <!-- SECCIÓN: IDIOMAS -->
             <section id="languages">
                 <h2>Idiomas</h2>
                 <div class="lang-item">
@@ -296,7 +278,6 @@
                 </div>
             </section>
 
-            <!-- SECCIÓN: PROYECTOS (¡MUY IMPORTANTE!) -->
             <section id="projects">
                 <h2>Proyectos y Logros Académicos</h2>
 
@@ -329,29 +310,36 @@
                         <span>Taller</span>
                     </div>
                 </div>
-
-                <!-- Agrega más proyectos si los tienes -->
             </section>
 
-            <!-- SECCIÓN: CONTACTO -->
+            <!-- SECCIÓN CONTACTO MEJORADA -->
             <section id="contact">
                 <h2>Contacto</h2>
                 <div class="contact-info">
-                    <a href="mailto:ruthcaceresyareta@gmail.com">📧 Correo Electrónico</a>
-                    <!-- Agrega aquí enlaces a tus redes profesionales -->
-                    <a href="[URL de tu LinkedIn]" target="_blank">🔗 LinkedIn</a>
-                    <!-- <a href="[URL de tu GitHub]" target="_blank">🐙 GitHub</a> Si tienes -->
+                    
+                    <!-- Opción 2: Gmail Web (siempre funciona en el navegador) -->
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ruthcaceresyareta@gmail.com" target="_blank">
+                        📧 Gmail Web
+                    </a>
+                    
+                    <!-- Opción 3: WhatsApp -->
+                    <a href="https://wa.me/51987654321?text=Hola%20Ruth%2C%20vi%20tu%20CV%20y%20me%20gustar%C3%ADa%20contactarte" target="_blank">
+                        💬 WhatsApp
+                    </a>
+
                 </div>
+                <p style="margin-top: 10px; color: #555; font-size: 0.95rem;">
+                    📱 Teléfono: +51 987 654 321
+                </p>
             </section>
 
-        </div> <!-- /main-content -->
+        </div>
 
-        <!-- ====== PIE DE PÁGINA ====== -->
         <footer>
             &copy; 2026 Ruth Nayle Caceres Yareta. Todos los derechos reservados.
         </footer>
 
-    </div> <!-- /container -->
+    </div>
 
 </body>
 </html>
